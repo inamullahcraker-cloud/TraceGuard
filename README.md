@@ -1,3 +1,4 @@
+
 # TraceGuard — Payment Incident Investigation System
 
 TraceGuard is a deterministic payment incident investigation system for e-commerce platforms. It reconstructs an order's financial state from JSONL event streams, detects data-integrity problems, and produces evidence-backed investigation reports.
@@ -164,6 +165,7 @@ traceguard/
 │   └── test_events.jsonl
 ├── scripts/
 │   └── generate_dataset.py
+|   └── validate_dataset.py  
 ├── tests/
 │   ├── test_reconciliation.py
 │   └── test_cli.py
@@ -192,7 +194,10 @@ traceguard/
 5. Support text must remain untrusted contextual data.
 6. Uncertainty must be represented explicitly as `UNKNOWN`.
 7. Investigation results must be traceable to evidence event IDs.
+## Engineering Documentation
 
+- [DECISIONS.md](DECISIONS.md): Engineering trade-offs, safety decisions, uncertainty handling, scalability considerations, and future improvements.
+- [AI_USAGE.md](AI_USAGE.md): AI tools used, development assistance, corrected suggestions, and human verification responsibilities.
 ## Limitations and Future Improvements
 
 - The current implementation uses in-memory event retrieval rather than a production database.
