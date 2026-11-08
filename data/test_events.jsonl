@@ -1,0 +1,2 @@
+{"tenant_id":"T1","order_id":"O-201","event_id":"order-1","type":"ORDER_CREATED"}
+{"tenant_id":"T1","order_id":"O-201","event_id":"pay-1","type":"PAYMENT_CAPTURED"}
