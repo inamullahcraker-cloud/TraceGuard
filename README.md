@@ -1,3 +1,4 @@
+
 # TraceGuard — Payment Incident Investigation System
 
 TraceGuard is a deterministic payment incident investigation system for e-commerce platforms. It reconstructs an order's financial state from JSONL event streams, detects data-integrity problems, and produces evidence-backed investigation reports.
