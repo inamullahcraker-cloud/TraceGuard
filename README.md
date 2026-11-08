@@ -69,8 +69,8 @@ The runtime implementation uses the Python standard library.
 Clone the repository and enter the project directory:
 
 ```bash
-git clone git@github.com:inamullahcraker-cloud/TraceGuard
-cd traceguard
+git clone https://github.com/inamullahcraker-cloud/TraceGuard.git
+cd TraceGuard
 ```
 
 Create and activate a virtual environment:
@@ -101,7 +101,11 @@ Regenerate the deterministic dataset with:
 ```bash
 python scripts/generate_dataset.py
 ```
+Validate the generated dataset and investigate all included orders:
 
+```bash
+python -m scripts.validate_dataset
+```
 ## Usage
 
 Run an investigation:
@@ -163,7 +167,8 @@ traceguard/
 │   ├── events.jsonl
 │   └── test_events.jsonl
 ├── scripts/
-│   └── generate_dataset.py
+│   ├── generate_dataset.py
+│   └── validate_dataset.py
 ├── tests/
 │   ├── test_reconciliation.py
 │   └── test_cli.py
@@ -192,6 +197,11 @@ traceguard/
 5. Support text must remain untrusted contextual data.
 6. Uncertainty must be represented explicitly as `UNKNOWN`.
 7. Investigation results must be traceable to evidence event IDs.
+
+## Engineering Documentation
+
+- [DECISIONS.md](DECISIONS.md): Engineering trade-offs, safety decisions, uncertainty handling, scalability considerations, and future improvements.
+- [AI_USAGE.md](AI_USAGE.md): AI tools used, development assistance, corrected suggestions, and human verification responsibilities.
 
 ## Limitations and Future Improvements
 
